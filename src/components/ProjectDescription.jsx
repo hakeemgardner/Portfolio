@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 export default function ProjectDescription(props) {
   const topVariants = {
     offscreen: {
@@ -23,7 +24,16 @@ export default function ProjectDescription(props) {
     description,
     technologiesOne,
     technologiesTwo,
+    onClickAction,
   } = props;
+  const navigate = useNavigate();
+  const handleViewProject = () => {
+    // Call the onClickAction function passed as a prop
+    if (onClickAction) {
+      onClickAction();
+    }
+  };
+
   return (
     <motion.div
       initial="offscreen"
@@ -43,6 +53,7 @@ export default function ProjectDescription(props) {
           <Button
             alternateClass=" text-Onyx border-2 border-black w-48 flex items-center text-center text-xs hover:bg-Onyx"
             buttonText="VIEW WEBSITE"
+            onClickAction={handleViewProject}
           />
         </div>
         <div className="sm:w-1/2 mt-6">

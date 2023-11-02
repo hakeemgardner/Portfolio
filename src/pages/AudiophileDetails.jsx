@@ -4,7 +4,13 @@ import ProjectPreview from "../components/ProjectPreview";
 import audiphilepreview from "../assets/audiophilepreview.jpg";
 import audiophiletone from "../assets/audiophilestaticpreviewone.jpg";
 import audiophiletwo from "../assets/audiophilestaticpreviewtwo.jpg";
-export default function ProjectDetailPage() {
+
+export default function ProjectDetailPage(props) {
+  const handleAudiophileClick = () => {
+    // Define the specific behavior when Audiophile is clicked
+    window.location.href = "https://audiophile-sigma-sepia.vercel.app/";
+  };
+  const { onClickAction } = props;
   return (
     <div>
       <ProjectDescription
@@ -13,6 +19,7 @@ export default function ProjectDetailPage() {
         description="This project required me to build a fully responsive multi page to the designs provided. I used React and Tailwind CSS for the areas that required interactivity"
         technologiesOne="Interaction Design / Front End Development"
         technologiesTwo="REACT/ TAILWINDCSS/ FRAMERMOTION / REDUX"
+        onClickAction={handleAudiophileClick}
       />
       <ProjectPreview
         titleOne="Project Background"

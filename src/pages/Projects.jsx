@@ -9,17 +9,17 @@ export default function Projects() {
   const navigate = useNavigate();
   const handleAudiophileClick = () => {
     // Define the specific behavior when Audiophile is clicked
-    navigate("/audiophile-details");
+    navigate("/AudiophileDetails");
   };
 
   const handleRestCountriesClick = () => {
     // Define the specific behavior when Rest Countries is clicked
-    navigate("/rest-countries-details");
+    navigate("/RestCountriesDetails");
   };
 
   const handleNewsletterClick = () => {
     // Define the specific behavior when Newsletter is clicked
-    navigate("/newsletter-details");
+    navigate("/NewsletterDetails");
   };
   return (
     <div>

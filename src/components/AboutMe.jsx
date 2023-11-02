@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../components/Button";
-import Portfolioimage from "../assets/Portfolioimage.svg";
+import Portfolioimage from "../assets/Portfolioimage.png";
 import ProjectInterest from "../components/ProjectInterest";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";

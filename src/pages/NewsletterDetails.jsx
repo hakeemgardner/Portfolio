@@ -4,7 +4,13 @@ import ProjectPreview from "../components/ProjectPreview";
 import newsletterpreview from "../assets/newsletterpreview.jpg";
 import Thankyou from "../assets/Thankyou.jpg";
 import mobilenews from "../assets/mobilenews.jpg";
-export default function ProjectDetailPage() {
+export default function ProjectDetailPage(props) {
+  const handleNewsletterClick = () => {
+    // Define the specific behavior when Newsletter is clicked
+    window.location.href =
+      "https://hakeemgardner.github.io/newsletter.github.io/";
+  };
+  const { onClickAction } = props;
   return (
     <div>
       <ProjectDescription
@@ -13,6 +19,7 @@ export default function ProjectDetailPage() {
         description="This project required me  to build out this newsletter form and get it looking as close to the design as possible. I used HTML5, along with CSS  and JavaScript for the areas that required interactivity, such as the email input."
         technologiesOne="Interaction Design / Front End Development"
         technologiesTwo="HTML/ CSS/ JS"
+        onClickAction={handleNewsletterClick}
       />
       <ProjectPreview
         titleOne="Project Background"

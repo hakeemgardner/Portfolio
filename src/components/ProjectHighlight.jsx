@@ -18,9 +18,12 @@ export default function ProjectHighlight(props) {
   };
   const naviagte = useNavigate();
   const handleViewProject = () => {
-    naviagte("/ProjectDetailPage ");
+    // Call the onClickAction function passed as a prop
+    if (onClickAction) {
+      onClickAction();
+    }
   };
-  const { imgSrc, projectTitle, description, addClass } = props;
+  const { imgSrc, projectTitle, description, addClass, onClickAction } = props;
   return (
     <motion.div
       initial="offscreen"

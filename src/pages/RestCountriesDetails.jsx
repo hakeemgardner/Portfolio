@@ -4,7 +4,12 @@ import ProjectPreview from "../components/ProjectPreview";
 import countriespreview from "../assets/RESTCountries.jpg";
 import mobilecountries from "../assets/mobilecountries.jpg";
 import countriesblackandwhite from "../assets/countriesblackandwhite.jpg";
-export default function ProjectDetailPage() {
+export default function ProjectDetailPage(props) {
+  const handleRestCountriesClick = () => {
+    // Define the specific behavior when Rest Countries is clicked
+    window.location.href = "https://rest-countries-api-ten-alpha.vercel.app/";
+  };
+  const { onClickAction } = props;
   return (
     <div>
       <ProjectDescription
@@ -13,6 +18,7 @@ export default function ProjectDetailPage() {
         description="This project required me to  integrate with the REST Countries API to pull country data and display it like in the designs. I used React and Tailwind CSS."
         technologiesOne="Interaction Design / Front End Development"
         technologiesTwo="REACT/ TAILWINDCSS"
+        onClickAction={handleRestCountriesClick}
       />
       <ProjectPreview
         titleOne="Project Background"
